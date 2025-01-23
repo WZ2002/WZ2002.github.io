@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Security Studies Professional</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f4f8; /* Light pastel blue */
+        }
+    
+        /* Navigation */
+        nav {
+            background: #2c3e50;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+    
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+    
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+ /* Hero Section - Updated */
+ .hero {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('images/background.jpg');
+            background-size: cover;
+            color: white;
+            margin-top: 3rem;
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .hero-left {
+            flex: 1;
+            text-align: right;
+            padding-right: 2rem;
+        }
+
+        .hero-left h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .hero-divider {
+            width: 2px;
+            height: 120px;
+            background-color: white;
+            margin: 0 1rem;
+        }
+
+        .hero-right {
+            flex: 2;
+            text-align: left;
+            padding-left: 2rem;
+        }
+
+        .hero-right h2 {
+            font-size: 1.8rem;
+            font-weight: normal;
+            margin: 0 0 1rem 0;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.95); /* Brighter white */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds subtle shadow for better readability */
+        }
+
+        .hero-right p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .watermark {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Responsive Hero Section */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .hero-left {
+                text-align: center;
+                padding-right: 0;
+            }
+
+            .hero-divider {
+                width: 80%;
+                height: 2px;
+                margin: 1rem auto;
+            }
+
+            .hero-right {
+                text-align: center;
+                padding-left: 0;
+            }
+
+            .hero-right h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-right p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Main Content Sections */
+        section {
+            padding: 4rem 2rem;
+            min-height: 100vh;
+        }
+    
+        .hero {
+            position: relative; /* Added to contain the absolutely positioned watermark */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('images/background.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+            /* Reduced minimum height to create more space for About section */
+            min-height: 90vh;
+        }
+
+        .watermark {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            pointer-events: none; /* Prevents the watermark from interfering with clicks */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;  /* Increased from 5% to create equal spacing on both sides */
+        } 
+
+        /* About Section - Added margin-top */
+        #about {
+            margin-top: 5rem;  /* This creates more space between hero and about section */
+        }
+    
+        /* About Content */
+        .about-content {
+            display: flex;
+            gap: 5%;
+            align-items: flex-start;
+            margin-top: 2rem;
+        }
+    
+        .profile-photo {
+            width: 35%;
+        }
+    
+        .profile-photo img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    
+        .about-text {
+            width: 90%;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;  /* Add this line for justified text */
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .about-title {
+            margin: 0;  /* Remove default margin from h2 */
+        }
+
+        .cv-button {
+            background: #2c3e50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-left: 5%;  /* Creates 5% space between title and button */
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cv-button:hover {
+            background: #34495e;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .about-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .cv-button {
+                margin-left: 0;
+            }
+        }
+    
+        /* Skills Section */
+        .skills {
+            background: transparent
+            padding: 4rem 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .skill-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .skill-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Second set of skills */
+        .skills-section {
+            margin-top: 5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills {
+                padding: 2rem 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .skill-card {
+                padding: 1.25rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    
+        /* Projects Section */
+        .projects {
+            background: transparent
+        }
+    
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    
+        .project-card {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .project-meta {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border-left: 4px solid #2c3e50;
+        }
+
+        .project-role, .project-duration {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-duration {
+            margin-bottom: 0;
+        }
+
+        .meta-label {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 80px;
+        }
+
+        .meta-value {
+            color: #666;
+        }
+
+    
+        /* Blog Section */
+        .blog-section {
+            padding: 4rem 0;
+            background: transparent
+            min-height: auto;  /* Remove fixed height to allow content to determine height */
+        }
+
+        /* Blog grid layout */
+        .blog-posts {
+            display: flex;
+            flex-direction: column;  /* Changed from row to column */
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 100%; /* Set maximum width for better readability */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+
+        /* Individual blog post card */
+        .post-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 1.5rem;
+            width: 100%;  /* Take full container width */
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        /* Blog post title */
+        .post-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Blog post preview text */
+        .post-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #34495e;
+        }
+
+        /* Post meta information */
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more-btn:hover {
+            background: #34495e;
+        }
+
+        .like-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .like-button:hover {
+            transform: scale(1.1);
+        }
+
+        .like-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Custom scrollbar for blog posts */
+        .blog-posts::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .blog-posts::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .blog-posts::-webkit-scrollbar-thumb {
+            background: #2c3e50;
+            border-radius: 4px;
+        }
+
+        .blog-posts::-webkit-scrollbar-thumb:hover {
+            background: #34495e;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .post-card {
+                flex: 0 0 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-section {
+                padding: 2rem 0;
+            }
+            
+            .post-card {
+                padding: 1.25rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+    
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(2 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+    
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+    
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            height: auto;  /* This makes the image keep its natural aspect ratio */
+            object-fit: unset;
+        }
+
+        @media (min-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-item:nth-child(4),
+            .gallery-item:nth-child(5) {
+                grid-column: span 1;
+                grid-row: 2;
+            }
+        } 
+    
+        /* Contact Section Updates */
+        .contact-email {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    
+        .contact-email a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        .contact-email a:hover {
+            text-decoration: underline;
+        }
+    
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+    
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    
+        .btn {
+            background: #2c3e50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .btn:hover {
+            background: #34495e;
+        }
+    
+        /* Updated Social Links */
+        .social-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            background: #2c3e50;
+            color: white;
+        }
+
+        /* Specific colors for each social media on hover */
+        .social-links a:hover .fa-linkedin {
+            color: #0077b5;
+        }
+
+        .social-links a:hover .fa-x-twitter {
+            color: white;
+        }
+
+        .social-links a:hover .fa-github {
+            color: white;
+        }
+
+        .social-links a:hover .fa-instagram {
+            color: #e4405f;
+        }
+
+        /* Responsive design for social links */
+        @media (max-width: 768px) {
+            .social-links {
+                gap: 1rem;
+            }
+            
+            .social-links a {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            /* Existing mobile styles */
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            section {
+                padding: 2rem 1rem;
+            }
+        
+            .about-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        
+            .profile-photo,
+            .about-text {
+                width: 100%;
+                text-align: left;  /* Switch to left alignment on mobile for better readability */
+            }
+        
+            .social-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            /* Add this new container padding adjustment */
+            .container {
+                padding: 0 5%;  /* Reduce padding on mobile devices */
+            }
+
+            .project-meta {
+                padding: 0.8rem;
+            }
+
+            .project-role, .project-duration {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+
+            .meta-label {
+            min-width: auto;
+            } 
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1001;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            width: 90%;
+            max-width: 1200px;
+            border-radius: 8px;
+            display: flex;
+            gap: 2rem;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .modal-text {
+            flex: 2;
+            max-width: 97%;
+            padding: 0 2rem 2rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-text .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .modal-text .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .modal-text .post-meta span i {
+            margin-right: 0.25rem;
+        }
+
+        .modal-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .modal-text li {
+            text-align: justify;
+        }
+
+        .modal-text p:last-child {
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .modal-header {
+            margin-bottom: 2rem;
+        }
+
+        .header-container {
+            position: relative;
+            margin-bottom: 3rem;  /* Increased from 3rem to accommodate title height */
+        }
+
+        .modal-header-image {
+            width: 100%;  /* Reduced to 2/3 of original width */
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .modal-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .title-overlay {
+            position: relative;  /* Changed from absolute */
+            margin-top: -30px;  /* Added negative margin instead of bottom positioning */
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+            padding: 2rem 3rem;
+            width: 90%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: center;  /* Added */
+        }
+
+        .title-overlay h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            line-height: 1.3;
+            margin-left: auto;  /* Added */
+            margin-right: auto;  /* Added */
+            max-width: 800px;  /* Added */
+        }
+
+        .title-overlay .post-meta {
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .title-overlay {
+                padding: 1.5rem;
+            }
+            
+            .title-overlay h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .watermark {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.75rem;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            padding: 4px 8px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: #333;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background: #34495e;
+        }
+
+        .modal-text h3 {
+            margin-top: 2rem;  /* Add space above each section header */
+            margin-bottom: 1rem;  /* Add space below each section header */
+        }
+
+        .section-spacing {
+            margin-bottom: 2rem;  /* Add space after each section content */
+        }
+
+        .bold-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        #project2Modal .modal-image {
+            width: 100%;
+            height: 400px; /* Taller height for portrait images */
+        }
+
+        #project2Modal .modal-images {
+            max-width: 300px; /* Narrower container for portrait images */
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                flex-direction: column;
+                margin: 10% auto;
+                width: 90%;
+                padding: 1.5rem;
+            }
+
+            .modal-images {
+                min-width: 100%;
+            }
+
+            .watermark {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Add these new styles to your existing CSS */
+        .blog-description {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            margin-bottom: 4rem;  /* Added to match top margin */
+        }
+
+        .blog-description-text {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .blog-description-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-description-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .blog-description {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                margin-bottom: 3rem;  /* Added to match top margin for mobile */
+            }
+
+            .blog-description-text {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .comments-section {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+            }
+        }
+
+        .modal-text::after {
+            content: "";
+            display: block;
+            height: 0.01rem; /* Adjust this to your desired space */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1>YUNZHI<br>ZHANG</h1>
+            </div>
+            <div class="hero-divider"></div>
+            <div class="hero-right">
+                <h2>"Established a peace which will afford assurance that all the men in all the lands may live out their lives in freedom from fear and want"</h2>
+                <p>Specializing in International Security, Environmental Security, History, and Cross-Cultural Communication</p>
+            </div>
+        </div>
+        <div class="watermark">Mount Everest, taken by Yunzhi Zhang, July 17, 2024</div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="about-header">
+            <h2 class="about-title">About Me</h2>
+            <a href="assets/CV Resume-leadership.pdf" 
+               class="cv-button" 
+               target="_blank"
+               rel="noopener noreferrer">
+                Download CV
+            </a>
+        </div>
+        <div class="about-content">
+            <div class="profile-photo">
+                <img src="images/about_me.jpg" alt="Your Professional Photo">
+            </div>
+            <div class="about-text">
+                <p>Yunzhi Zhang is a graduate student at Johns Hopkins University, specializing in Global Security Studies with a focus on Energy and Environmental Security. With a bachelor degree on History from the University of Sydney, she has strong analytical and research skills and is committed to tackling global challenges like sustainable development and climate resilience.</p>
+                    
+                <p>Yunzhi has extensive experience in teaching, volunteering, and cultural exchange, contributing to environmental conservation, education for underserved communities, and cross-cultural understanding. These experiences have strengthened her project coordination, communication, and leadership skills. Having traveled to over 20 countries, she has gained valuable insights into diverse cultures and global dynamics, enhancing her adaptability and broadening her perspective.</p>
+                    
+                <p>Fluent in English and Mandarin, with basic proficiency in Japanese, Yunzhi aims to work with NGOs and international organizations to advance human dignity, sustainable development, and global peace, reflecting her passion for creating positive social impact.</p>
+            </div>
+        </div>
+
+        <!-- New About the Blog Section -->
+        <div class="blog-description">
+            <h2 class="about-title">About the Blog</h2>
+            <div class="blog-description-text">
+                <p>Welcome to my blog—a space where thoughts take flight, ideas find voice, and the world unfolds through my eyes. Here, I share reflections, observations, and experiences, weaving stories that connect the personal with the universal. From moments of inspiration to deep dives into complex ideas, this blog is both a creative canvas and a space for exploration.</p>
+                
+                <p>My posts span diverse topics, shaped by my academic background, global travels, and daily musings. You'll find reflections on global issues, cultural insights, and thoughtful takes on life's subtleties. Each piece invites you to pause, reflect, and see the world through a fresh lens. I hope to spark curiosity and share ideas that inspire positive change.<p>
+
+                <p>Thank you for visiting. Let's reflect, discover, and work toward a brighter future together.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <!-- Professional Skills -->
+                <div class="skill-card">
+                    <h3>Global Security Analysis</h3>
+                    <p>- International Security Policy<br>
+                       - Environmental Security<br>
+                       - Conflict Resolution<br>
+                       - Risk Assessment</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <p>- English (Professional)<br>
+                       - Chinese (Native)<br>
+                       - Japanese (Introductory)</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Research</h3>
+                    <p>- Academic Research<br>
+                       - Data Analysis<br>
+                       - Policy Analysis<br>
+                       - Historical Research</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Technical Proficiency</h3>
+                    <p>- Microsoft Office Suite<br>
+                       - Data Analysis Tools<br>
+                       - Project Management Software<br>
+                       - Digital Research Tools</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Social Media Related</h3>
+                    <p>- Content Creation<br>
+                       - Social Media Management<br>
+                       - Digital Communication<br>
+                       - Video Editing</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Others</h3>
+                    <p>- Group Work<br>
+                       - Public Speaking<br>
+                       - Cross-cultural Communication<br>
+                       - Leadership</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hobbies Section -->
+        <div class="container skills-section">
+            <h2>Hobbies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Travel</h3>
+                    <p>- Global Exploration<br>
+                       - Cultural Immersion<br>
+                       - Photography<br>
+                       - Travel Writing</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Music</h3>
+                    <p>- Classical Piano<br>
+                       - Music Appreciation<br>
+                       - Concert Attendance<br>
+                       - Music History</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Reading and Writing</h3>
+                    <p>- International Relations<br>
+                       - Historical Non-fiction<br>
+                       - Cultural Studies<br>
+                       - Creative Writing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Volunteer and Academic Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Volunteer Teaching at Shaanxi Aiding Centre for Children Living In Difficult Circumstances</h3>
+                    <div class="project-meta">
+                        <div class="project-role">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Volunteer Teacher</span>
+                        </div>
+                        <div class="project-duration">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">03/2015 - present</span>
+                        </div>
+                    </div>
+                    <button class="read-more-btn" onclick="openModal('project1')">Read More</button>
+                </div>
+                <!-- Add more project cards as needed -->
+                <div class="project-card">
+                    <h3>Yellow River Soup Kitchen in Xi'an, Shaanxi</h3>
+                    <div class="project-meta">
+                        <div class="project-role">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Volunteer Worker</span>
+                        </div>
+                        <div class="project-duration">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">07/2018 - 01/2020, 10/2020 - 07/2022</span>
+                        </div>
+                    </div>
+                    <button class="read-more-btn" onclick="openModal('project2')">Read More</button>
+                </div>
+                <div class="project-card">
+                    <h3>Development Society 'Education in Rural China Program'</h3>
+                    <div class="project-meta">
+                        <div class="project-role">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Group Leader</span>
+                        </div>
+                        <div class="project-duration">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">12/2021 - 01/2022</span>
+                        </div>
+                    </div>
+                    <button class="read-more-btn" onclick="openModal('project3')">Read More</button>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Cultural Exchange Program at Xi'an International School</h3>
+                    <div class="project-meta">
+                        <div class="project-role">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Volunteer Teacher & Group Leader</span>
+                        </div>
+                        <div class="project-duration">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">12/2016 - 01/2017</span>
+                        </div>
+                    </div>
+                    <button class="read-more-btn" onclick="openModal('project4')">Read More</button>
+                </div> 
+                
+                <div class="project-card">
+                    <h3>Museum Decolonization and Inclusivity Project</h3>
+                    <div class="project-meta">
+                        <div class="project-role">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Designer and Coordinator</span>
+                        </div>
+                        <div class="project-duration">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">07/2023 - 12/2023</span>
+                        </div>
+                    </div>
+                    <button class="read-more-btn" onclick="openModal('project5')">Read More</button>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Museum Artifact Project</h3>
+                    <div class="project-meta">
+                        <div class="project-role">
+                            <span class="meta-label">Role:</span>
+                            <span class="meta-value">Researcher and Content Contributor</span>
+                        </div>
+                        <div class="project-duration">
+                            <span class="meta-label">Duration:</span>
+                            <span class="meta-value">10/2023 - 02/2024</span>
+                        </div>
+                    </div>
+                    <button class="read-more-btn" onclick="openModal('project6')">Read More</button>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section HTML -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2>Latest Posts</h2>
+            <div class="blog-posts">
+                <div class="post-card">
+                    <h3>Climate Change as a Non-Traditional Threat in Global Security</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Apr 29, 2024</span>
+                        <span><i class="far fa-folder"></i> Security Studies</span>
+                    </div>
+                    <p>When we think of global security threats, images of war, terrorism, or cyberattacks often come to mind. Yet, the 21st century has brought a sobering realization: some of the most profound dangers to human survival are not armed conflicts but the silent......</p>
+                    <button class="read-more-btn" onclick="openModal('post1')">Read More</button>
+                </div>
+    
+                <div class="post-card">
+                    <h3>Border Cultures and Conflicts in Travel</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> May 13, 2024</span>
+                        <span><i class="far fa-folder"></i> Travel</span>
+                    </div>
+                    <p>Borders, by their very nature, are paradoxical. On one hand, they delineate order—defining nations, cultures, and systems of governance. On the other, they embody tension, acting as sites of negotiation, conflict, and identity. For travelers, borders are more than......</p>
+                    <button class="read-more-btn" onclick="openModal('post2')">Read More</button>
+                </div>
+    
+                <!-- Add more blog post cards as needed -->
+                <div class="post-card">
+                    <h3>How the Legacy of Empires Shapes Global Security through an Internationalist Lens</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> June 6, 2024</span>
+                        <span><i class="far fa-folder"></i> Security Studies</span>
+                    </div>
+                    <p>Empires are not merely relics of history; their legacies remain embedded in the frameworks of modern international relations. While the imperial era has ostensibly passed, the borders, systems, and power dynamics they created......</p>
+                    <button class="read-more-btn" onclick="openModal('post3')">Read More</button>
+                </div>
+
+                <div class="post-card">
+                    <h3>Cities Where History Meets Modernity: Reflections from Rome to Kyoto</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Aug 20, 2024</span>
+                        <span><i class="far fa-folder"></i> Travel</span>
+                    </div>
+                    <p>Cities are places where the old and the new coexist, sometimes in harmony, sometimes in tension. Among them, Rome and Kyoto stand out as luminous examples of how history and modernity intertwine, creating urban spaces that are both timeless and dynamic. While their......</p>
+                    <button class="read-more-btn" onclick="openModal('post4')">Read More</button>
+                </div>
+
+                <div class="post-card">
+                    <h3>Reflecting in the Shadow of War: Lessons from Hiroshima’s Atomic Bomb Site</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Sep 7, 2024</span>
+                        <span><i class="far fa-folder"></i> Travel</span>
+                    </div>
+                    <p>Travel has a peculiar way of turning history into something tangible, immediate, and deeply personal. There is something profoundly humbling about standing in places where history unfolded, particularly sites marked by conflict and tragedy. Among the many war relics scattered......</p>
+                    <button class="read-more-btn" onclick="openModal('post5')">Read More</button>
+                </div>
+
+                <div class="post-card">
+                    <h3>Navigating Cross-Cultural Adaptation and Challenges</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Oct 1, 2024</span>
+                        <span><i class="far fa-folder"></i> Life</span>
+                    </div>
+                    <p>As someone who has spent much of my life moving between cultures, I’ve come to think of cross-cultural adaptation not as a single event but as an ongoing process—a dynamic, sometimes messy dance between discovery and discomfort. My journey has taken me from......</p>
+                    <button class="read-more-btn" onclick="openModal('post6')">Read More</button>
+                </div>
+
+                <div class="post-card">
+                    <h3>The Intersection of Global Security and Historical Inquiry: How the Past Shapes the Future</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Oct 19, 2024</span>
+                        <span><i class="far fa-folder"></i> Security Studies</span>
+                    </div>
+                    <p>Global security is often framed as a forward-looking field, preoccupied with emerging threats, technological advancements, and strategies for maintaining peace in an unpredictable world. History, on the other hand, is often seen as the study of what has already happened......</p>
+                    <button class="read-more-btn" onclick="openModal('post7')">Read More</button>
+                </div>
+
+                <div class="post-card">
+                    <h3>Personal Environmental Action and International Impact</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Nov 27, 2024</span>
+                        <span><i class="far fa-folder"></i> Security Studies</span>
+                    </div>
+                    <p>When we think of global security, we often picture armed conflicts, international diplomacy, or economic sanctions. Rarely do we associate it with the mundane choices we make every day—what we eat, how we commute, or the amount of waste we produce. Yet, in......</p>
+                    <button class="read-more-btn" onclick="openModal('post8')">Read More</button>
+                </div>
+
+                <div class="post-card">
+                    <h3>The Legacy of Colonialism and Its Impact on Contemporary Global Security</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Dec 22, 2024</span>
+                        <span><i class="far fa-folder"></i> Security Studies</span>
+                    </div>
+                    <p>Colonialism is often discussed in history classrooms as though it belongs to a distant past, an era of empires and conquests now confined to textbooks and museum exhibits. However, the legacy of colonialism is far from dead. Its political, economic, and cultural remnants......</p>
+                    <button class="read-more-btn" onclick="openModal('post9')">Read More</button>
+                </div>
+
+                <div class="post-card">
+                    <h3>The Historical Roots of Cross-Cultural Conflicts and the Challenges of Modern Globalization</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Jan 23, 2025</span>
+                        <span><i class="far fa-folder"></i> History</span>
+                    </div>
+                    <p>In an increasingly interconnected world, we are told that globalization is knitting humanity closer together, dissolving boundaries and fostering mutual understanding. Yet, the reality is more complicated. Beneath the surface of cultural exchanges and international collaboration......</p>
+                    <button class="read-more-btn" onclick="openModal('post10')">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="container">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="images/Gallery_1.JPG" alt="Gallery Image 1">
+          </div>
+          <div class="gallery-item">
+            <img src="images/Gallery_2.jpg" alt="Gallery Image 2">
+          </div>
+          <div class="gallery-item">
+            <img src="images/Gallery 3.jpg" alt="Gallery Image 3">
+          </div>
+          <div class="gallery-item">
+            <img src="images/Gallery_4.jpg" alt="Gallery Image 4">
+          </div>
+        </div>
+      </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <div class="contact-email">
+            <p>Email: <a href="mailto:wendyzhang20021111@gmail.com">wendyzhang20021111@gmail.com</a></p>
+        </div>
+        <div class="contact-form">
+            <form action="mailto:wendyzhang20021111@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/yunzhi-zhang-393a45335/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://x.com/yunzhi64101" target="_blank" title="X">
+                <i class="fab fa-x-twitter fa-2x"></i>
+            </a>
+            <a href="https://github.com/WZ2002" target="_blank" title="GitHub">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/imwendyzzzz/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="project1Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('project1')">&times;</span>
+            <div class="modal-text">
+                <h2>Volunteer Teaching at Shaanxi Aiding Centre</h2>
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="meta-label">Role:</span>
+                        <span class="meta-value">Volunteer Teacher</span>
+                    </div>
+                    <div class="project-duration">
+                        <span class="meta-label">Duration:</span>
+                        <span class="meta-value">03/2015 - present</span>
+                    </div>
+                </div>
+                
+                <h3>Project Overview</h3>
+                <div class="section-spacing">
+                    <p>This volunteer project focuses on providing educational and emotional support to children of incarcerated individuals. The program aims to cultivate literacy, cultural knowledge, and a sense of community among young students who face challenging personal circumstances. My role has evolved from a teaching assistant to a lead teacher, reflecting my growing commitment and responsibilities within the center.</p>
+                </div>
+                
+                <h3>Responsibilities</h3>
+                <div class="section-spacing">
+                    <ul>
+                        <li><span class="bold-title">Teaching Assistance (2015-2017):</span> Helped lead teachers with lessons on Chinese classical studies, guiding elementary and middle school students in reading and understanding texts.</li>
+                        <li><span class="bold-title">Lead Teaching Role (2017-present):</span> Took on a teaching role, explaining classical texts and fostering critical thinking and a love of learning.</li>
+                        <li><span class="bold-title">Kindergarten Support:</span> Assisted in teaching character recognition, reading, managing routines, and playtime for social and cognitive growth.</li>
+                        <li><span class="bold-title">Fundraising Activities:</span> Organized and joined street fundraisers and charity galas to support the center's programs and resources.</li>
+                    </ul>
+                </div>
+                
+                <h3>Key Achievements</h3>
+                <div class="section-spacing">
+                    <ul>
+                        <li>Helped children build reading skills and understand Chinese culture through classical studies, connecting them with traditional values and fostering academic confidence and cultural identity.</li>
+                        <li>Organized charity events that raised funds to enhance the center's educational resources, support the rebuilding of the cafeteria, and update dormitories.</li>
+                        <li>Financially supported two peers' college tuition, helping them pursue higher education.</li>
+                        <li>Created a safe, supportive environment for young children to develop socially through play and activities.</li>
+                    </ul>
+                </div>
+                
+                <h3>Personal Growth</h3>
+                <div class="section-spacing">
+                    <p>This experience has deepened my understanding of educational inequality and reinforced my dedication to making a positive impact in underserved communities. Through hands-on teaching and organizational responsibilities, I have developed valuable skills in leadership, communication, and empathy, shaping my perspective on social responsibility and community service.</p>
+                </div>
+            </div>
+            <div class="modal-images">
+                <div class="modal-image">
+                    <img src="images/Shaanxi_aiding_centre.png" alt="Teaching at Shaanxi Aiding Centre - Building">
+                </div>
+                <div class="modal-image">
+                    <img src="/images/Shaanxi_aiding_me.JPG" alt="Teaching at Shaanxi Aiding Centre - Teaching">
+                    <div class="watermark">Yunzhi Zhang teaching at Shaanxi Aiding Centre, Feb 03, 2022</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Project 2 -->
+    <div id="project2Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('project2')">&times;</span>
+            <div class="modal-text">
+                <h2>Yellow River Soup Kitchen in Xi'an, Shaanxi</h2>
+                <div class="project-meta">
+                    <div class="project-role">
+                        <span class="meta-label">Role:</span>
+                        <span class="meta-value">Volunteer Worker</span>
+                    </div>
+                    <div class="project-duration">
+                        <span class="meta-label">Duration:</span>
+                        <span class="meta-value">07/2018 - 01/2020, 10/2020 - 07/2022</span>
+                    </div>
+                </div>
+                
+                <h3>Project Overview</h3>
+                <div class="section-spacing">
+                    <p>Yellow River Soup Kitchen provides essential support for the homeless, distributing food, clothing, and other necessities to those in need. Operating rain or shine, this initiative aims to improve the lives of the homeless community by meeting basic needs and offering compassion and care. Activities occur both in the church and on the streets, particularly focusing on distributing items such as food, warm clothing, and hygiene supplies, as well as organizing donations for efficient distribution.</p>
+                </div>
+                
+                <h3>Responsibilities</h3>
+                <div class="section-spacing">
+                    <ul>
+                        <li><span class="bold-title">Food Distribution and Cleanup:</span> Distributed food to the homeless at a local church twice weekly, maintained order, and handled cleanup and dishwashing.</li>
+                        <li><span class="bold-title">Street Outreach:</span> Conducted outreach twice a month, delivering quilts, clothing, medicine, and essentials directly to homeless individuals.</li>
+                        <li><span class="bold-title">Pandemic Response:</span> Set up fixed distribution points during the pandemic to provide food and preventive items, ensuring safety.</li>
+                        <li><span class="bold-title">Warehouse Organization:</span> Organized donated items in the warehouse periodically, keeping supplies available and efficiently distributed</li>
+                    </ul>
+                </div>
+                
+                <h3>Key Achievements</h3>
+                <div class="section-spacing">
+                    <ul>
+                        <li>Provided weekly support to the homeless, improving access to basic necessities.</li>
+                        <li>Distributed essential items like food, clothing, and medicine at the church and on the streets.</li>
+                        <li>Adapted services during the pandemic by setting up safe distribution points to ensure continuous support.</li>
+                        <li>Organized warehouse donations, enhancing distribution efficiency and ensuring high-demand items were available.</li>
+                    </ul>
+                </div>
+                
+                <h3>Personal Growth</h3>
+                <div class="section-spacing">
+                    <p>This experience has fostered a strong sense of empathy and resilience, teaching me the importance of consistency and adaptability when supporting vulnerable populations. Working in challenging conditions has enhanced my organizational skills and reinforced my commitment to social responsibility, enabling me to better understand and respond to the needs of the homeless community.</p>
+                </div>
+            </div>
+            <div class="modal-images">
+                <div class="modal-image">
+                    <img src="images/Yellow_soup_me1.JPG" alt="Conservation Work at National Parks">
+                </div>
+                <div class="modal-image">
+                    <img src="images/Yellow_soup_me2.jpg" alt="Educational Programs">
+                    <div class="watermark">Yunzhi Zhang delivers food to the homeless, Jan 10, 2022</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add these new modals after your existing modals, before the closing body tag -->
+<div id="project3Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('project3')">&times;</span>
+        <div class="modal-text">
+            <h2>Development Society 'Education in Rural China Program'</h2>
+            <div class="project-meta">
+                <div class="project-role">
+                    <span class="meta-label">Role:</span>
+                    <span class="meta-value">Group Leader</span>
+                </div>
+                <div class="project-duration">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">12/2021 - 01/2022</span>
+                </div>
+            </div>
+            
+            <h3>Project Overview</h3>
+            <div class="section-spacing">
+                <p>As part of the “Education in Rural China Program,” this project aimed to convey scientific and cultural knowledge to elementary school students in impoverished areas, specifically targeting schools in Guiyang County, Hunan, and Zhong County, Chongqing, China. Leveraging online video teaching methods due to COVID-19 restrictions, this initiative was well-received by students, local schools, and education departments.</p>
+            </div>
+            
+            <h3>Responsibilities</h3>
+            <div class="section-spacing">
+                <ul>
+                    <li><span class="bold-title">Student Background Analysis:</span> Assessed student backgrounds to tailor content, assigned tasks to team members, and set timelines for smooth progress.</li>
+                    <li><span class="bold-title">Online Instruction:</span> Delivered science and culture lessons through engaging video sessions to inspire students in under-resourced areas.</li>
+                    <li><span class="bold-title">Animation and Content Creation:</span> Proposed an animated format for better engagement, collaborating on animation, voiceover, and scriptwriting to create a multimedia experience.</li>
+                </ul>
+            </div>
+            
+            <h3>Key Achievements</h3>
+            <div class="section-spacing">
+                <ul>
+                    <li>Received commendations from schools and education departments for innovative teaching and contributions to rural education.</li>
+                    <li>Used animation in lessons, making learning accessible and enjoyable. The format received positive feedback from students and authorities.</li>
+                    <li>Coordinated team tasks and timelines, ensuring smooth project execution and goal achievement.</li>
+                </ul>
+            </div>
+            
+            <h3>Personal Growth</h3>
+            <div class="section-spacing">
+                <p>This experience deepened my understanding of rural education challenges and strengthened my commitment to educational outreach. Collaborating on animated lesson content honed my creative and technical skills, equipping me with abilities in multimedia creation, animation, editing, and voiceover. I also developed resilience for intensive work and skills for effective team collaboration. Adapting teaching strategies to meet students’ needs fostered my adaptability and empathy, reinforcing my dedication to community service and inspiring me to advocate for educational equity.</p>
+            </div>
+        </div>
+        <div class="modal-images">
+            <div class="modal-image">
+                <img src="images/Development_society_1.png" alt="Conservation Work at Qinling Mountains">
+            </div>
+            <div class="modal-image">
+                <img src="images/Development_society_2.png" alt="Community Workshop">
+                <div class="watermark">The instructional video created by Yunzhi Zhang' team, December 29, 2021</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="project4Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('project4')">&times;</span>
+        <div class="modal-text">
+            <h2>Volunteer Teaching to underprivileged Chinese military descendants in Northern Thailand</h2>
+            <div class="project-meta">
+                <div class="project-role">
+                    <span class="meta-label">Role:</span>
+                    <span class="meta-value">Volunteer Teacher & Group Leader</span>
+                </div>
+                <div class="project-duration">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">12/2016 - 01/2017</span>
+                </div>
+            </div>
+            
+            <h3>Project Overview</h3>
+            <div class="section-spacing">
+                <p>The "Northern Thailand Volunteer Program" is a one-month cultural and educational outreach project focused on supporting children in Pai Dang Village, Thailand, who are descendants of the Chinese Expeditionary Force. Through activities such as music, dance, and history lessons, the program introduces Chinese traditional culture to the children, helping bridge cultural gaps and fostering an appreciation for heritage.</p>
+            </div>
+            
+            <h3>Responsibilities</h3>
+            <div class="section-spacing">
+                <ul>
+                    <li><span class="bold-title">School Coordination and Teaching Plans:</span> Worked with local schools to align teaching progress, develop plans, and assign tasks to team members, ensuring smooth collaboration.</li>
+                    <li><span class="bold-title">Cultural Activities Design:</span> Created engaging activities to introduce Chinese culture to children, using interactive methods like dance, music, and stories to overcome language barriers.</li>
+                    <li><span class="bold-title">Team Preparation and Training:</span> Led the Traditional Chinese Culture group in a 6-member team, organizing two months of preparation to design activities and introduce Chinese culture to children effectively.</li>
+                </ul>
+            </div>
+            
+            <h3>Key Achievements</h3>
+            <div class="section-spacing">
+                <ul>
+                    <li>Through on-site teaching, we introduced Thai children to Chinese classical studies and history, deepening their cultural connection with China.</li>
+                    <li>Organized activities like calligraphy and lion dance, giving children a firsthand experience of Chinese culture.</li>
+                    <li>Cleaned and decorated the school's only road, connecting it to the main road.</li>
+                    <li>Built strong relationships with students, staff, and the community, bringing valued continuity and cultural enrichment, appreciated by local education authorities.</li>
+                </ul>
+            </div>
+            
+            <h3>Personal Growth</h3>
+            <div class="section-spacing">
+                <p>
+                    Through this program, I developed teamwork skills, resilience for intensive work, and a commitment to cultural advocacy. Teaching in a foreign environment strengthened my adaptability and communication, while close collaboration highlighted the value of teamwork and cultural exchange. This experience reinforced my dedication to social service and inspired me to promote cultural understanding and educational outreach.</p>
+            </div>
+        </div>
+        <div class="modal-images">
+            <div class="modal-image">
+                <img src="images/Thai_1.JPG" alt="Cultural Workshop Session">
+            </div>
+            <div class="modal-image">
+                <img src="images/Thai_2.jpg" alt="Cultural Festival Event">
+                <div class="watermark">Yunzhi Zhang and team members organized games for the student evening event, December 25, 2016</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add these new modals after your existing modals, before the closing body tag -->
+<div id="project5Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('project5')">&times;</span>
+        <div class="modal-text">
+            <h2>Museum Decolonization and Inclusivity Project</h2>
+            <div class="project-meta">
+                <div class="project-role">
+                    <span class="meta-label">Role:</span>
+                    <span class="meta-value">Designer and Coordinator</span>
+                </div>
+                <div class="project-duration">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">07/2023 - 12/2023</span>
+                </div>
+            </div>
+            
+            <h3>Project Overview</h3>
+            <div class="section-spacing">
+                <p>In an interdisciplinary course project, my team and I developed a project focused on supporting the Australian Museum's decolonization efforts and making exhibits more inclusive for non-English speakers. We proposed non-verbal communication methods to enhance accessibility, helping diverse audiences connect with the museum's collections, and presented our final recommendations through a PowerPoint.</p>
+            </div>
+            
+            <h3>Responsibilities</h3>
+            <div class="section-spacing">
+                <ul>
+                    <li><span class="bold-title">Collaboration and Communication:</span> Communicate with team members effectively, update progress, and ensure task consistency to proposed practical solutions for the museum.</li>
+                    <li><span class="bold-title">Interdisciplinary Collaboration:</span> Collaborated with team members from various fields, learning to simplify and share specialized knowledge for better understanding.</li>
+                    <li><span class="bold-title">Field Research:</span> Visited the Australian Museum to observe areas for improvement and gather insights for recommendations.</li>
+                    <li><span class="bold-title">Presentation Design:</span> Created a clear, persuasive presentation in Canva, simplifying complex ideas to convey our proposal's impact, design and editing the final video.</li>
+                </ul>
+            </div>
+            
+            <h3>Key Achievements</h3>
+            <div class="section-spacing">
+                <ul>
+                    <li>Used tools like Microsoft Teams and Google Docs to work collaboratively.</li>
+                    <li>Proposed non-verbal strategies, like silent films and visual storytelling, to engage non-English speakers, focusing on accessibility without language dependence.</li>
+                    <li>Delivered a praised presentation for clarity and persuasiveness, showcasing my ability to simplify complex information effectively.</li>
+                    <li>Received positive feedback from our professor and museum staff, achieving the highest grade in the class for our innovative approach to inclusivity.</li>
+                </ul>
+            </div>
+            
+            <h3>Personal Growth</h3>
+            <div class="section-spacing">
+                <p>This project greatly enhanced my skills in teamwork, interdisciplinary collaboration, and cultural sensitivity. Leading the presentation and working closely with peers from diverse academic backgrounds improved my adaptability, communication, and ability to condense complex information. The experience strengthened my commitment to inclusivity and gave me confidence in advocating for practical solutions to real-world challenges.</p>
+            </div>
+        </div>
+        <div class="modal-images">
+            <div class="modal-image">
+                <img src="images/Museum_1.PNG" alt="Environmental Security Research">
+            </div>
+            <div class="modal-image">
+                <img src="images/Muesuem_2.PNG" alt="Research Presentation">
+                <div class="watermark">Final Proposal, Nov 27, 2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="project6Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('project6')">&times;</span>
+        <div class="modal-text">
+            <h2>Museum Artifact Project</h2>
+            <div class="project-meta">
+                <div class="project-role">
+                    <span class="meta-label">Role:</span>
+                    <span class="meta-value">Researcher and Content Contributor</span>
+                </div>
+                <div class="project-duration">
+                    <span class="meta-label">Duration:</span>
+                    <span class="meta-value">10/2023 - 02/2024</span>
+                </div>
+            </div>
+            
+            <h3>Project Overview</h3>
+            <div class="section-spacing">
+                <p>As part of the Material Culture in Asia course, our class conducted an artifact observation project at the Chau Chak Wing Museum at the University of Sydney. The project involved close observation and analysis of selected artifacts, with the goal of contributing to the museum's online resources.</p>
+            </div>
+            
+            <h3>Responsibilities</h3>
+            <div class="section-spacing">
+                <ul>
+                    <li><span class="bold-title">Artifact Analysis:</span> Conducted an in-depth, close observation of the Bronze Opium Weight artifact from 19th/20th century Myanmar, examining its historical and cultural significance.</li>
+                    <li><span class="bold-title">Content Creation:</span> Wrote an introduction and description of the artifact, synthesizing research to provide insights and context for museum visitors.</li>
+                </ul>
+            </div>
+            
+            <h3>Key Achievements</h3>
+            <div class="section-spacing">
+                <ul>
+                    <li>Published Work: My write-up on Bornze Opium Weight was selected by the museum and published in its Online Collection Publication, updating the artifact's information on the museum's website.</li>
+                </ul>
+            </div>
+            
+            <h3>Personal Growth</h3>
+            <div class="section-spacing">
+                <p>Leading these workshops significantly enhanced my facilitation and public speaking skills while deepening my understanding of cross-cultural dynamics. The experience improved my ability to adapt communication styles for diverse audiences and reinforced my commitment to promoting cultural understanding. It also helped me develop valuable skills in curriculum design and group facilitation.</p>
+            </div>
+        </div>
+        <div class="modal-images">
+            <div class="modal-image">
+                <img src="images/Opium_1.jpg" alt="Workshop Session">
+            </div>
+            <div class="modal-image">
+                <img src="images/Opium_2.PNG" alt="Group Discussion">
+                <div class="watermark">Cross-cultural communication workshop session, March 15, 2023</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="post1Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('post1')">&times;</span>
+        <div class="modal-text">
+            <div class="modal-header">
+                <div class="header-container">
+                    <img src="images/Header_1.jpg" alt="Blog header image" class="modal-header-image">
+                    <div class="title-overlay">
+                        <h2>Climate Change as a Non-Traditional Threat in Global Security</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> Apr 29, 2024</span>
+                            <span><i class="far fa-user"></i> Yunzhi Zhang</span>
+                            <span><i class="far fa-folder"></i> Security Studies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>When we think of global security threats, images of war, terrorism, or cyberattacks often come to mind. Yet, the 21st century has brought a sobering realization: some of the most profound dangers to human survival are not armed conflicts but the silent, insidious challenges we have labeled as "non-traditional threats." Among these, climate change stands out—not just as an environmental issue but as a force reshaping global security. To understand its impact, we must explore not only its current implications but also draw critical lessons from history.</p>
+
+            <p>Unlike traditional threats, which are typically caused by deliberate human actions, climate change emerges from the collective, cumulative behavior of societies over centuries. Rising sea levels, extreme weather events, and resource scarcity are no longer future predictions but present realities. These phenomena destabilize nations, exacerbate inequalities, and even ignite conflicts. Consider the Syrian Civil War, where prolonged drought played a significant role in displacing rural populations and fueling unrest—a potent reminder that climate stress can amplify societal tensions.</p>
+
+            <p>However, climate change's true threat lies in its unpredictability and interconnectedness. It does not recognize borders, nor can it be subdued by a ceasefire. Instead, it challenges the foundational structures of global security: food systems, water availability, and even geopolitical stability.</p>
+
+            <p>History offers ample examples of societies unraveling in the face of environmental shifts. One of the most famous cases is the collapse of the Mayan civilization. For centuries, the Maya thrived, building sophisticated cities and cultural systems. Yet, prolonged droughts, exacerbated by deforestation and overpopulation, led to food shortages, internal conflicts, and eventual societal decline.</p>
+
+            <p>Similarly, the Little Ice Age (roughly 1300–1850) caused famines, economic downturns, and political instability across Europe and Asia. The Ottoman Empire, for instance, struggled with agricultural shortfalls and rebellions, while Europe saw its own upheavals, including the Thirty Years' War—a conflict deeply influenced by resource scarcity and climate-induced pressures.</p>
+
+            <p>These historical precedents reveal a critical truth: environmental stress can act as a catalyst, transforming latent vulnerabilities into crises. The fall of civilizations is rarely due to a single cause but often the interplay of environmental, social, and political factors.</p>
+
+            <p>So, how can we apply these lessons to today's challenges? First, history underscores the importance of resilience. Societies that adapt creatively to environmental changes—like the Netherlands with its water management systems—are better equipped to weather crises. By contrast, those that ignore or exacerbate environmental problems risk collapse.</p>
+
+            <p>Second, historical case studies remind us that climate change is not a standalone issue but a multiplier. It magnifies preexisting inequalities and conflicts, disproportionately affecting vulnerable populations. This requires global policies to address not only environmental concerns but also their social and economic dimensions.</p>
+
+            <p>Lastly, history shows the perils of delay. The Maya, the Ottomans, and other societies likely recognized their environmental problems but failed to act in time. Modern governments must avoid this trap by investing in proactive, long-term solutions rather than reactive measures.</p>
+
+            <p>Addressing climate change as a security issue demands a paradigm shift. Traditional security frameworks prioritize immediate threats, such as military aggression, but often overlook slow-moving dangers like environmental degradation. This must change. Nations and international bodies need to integrate climate considerations into their security strategies, recognizing that a flooded city or a decimated crop yield can be as destabilizing as any war.</p>
+
+            <p>Innovative approaches like climate diplomacy, green technology investments, and multilateral cooperation are essential. For example, the Paris Agreement, while imperfect, represents a step toward treating climate change as a collective challenge requiring global solidarity.</p>
+
+            <p>Climate change is rewriting the rules of global security, challenging us to think beyond conventional threats and embrace a more holistic perspective. By studying history, we gain a clearer understanding of the stakes and the consequences of inaction.</p>
+
+            <p>But history also offers hope. Societies that learn from their mistakes and adapt to new realities often emerge stronger. The question is whether we will heed these lessons or repeat the errors of the past. In an era where every fraction of a degree matters, the time to act is not tomorrow, but today.</p>
+
+            <p>The fight against climate change is not just an environmental battle; it is a struggle for the security and stability of humanity itself. History tells us what happens when we ignore such challenges. Let us ensure the future tells a different story.</p>
+        </div>
+    </div>
+
+    <div class="like-button">
+        <i class="fas fa-heart" style="color: #e74c3c; font-size: 1.5rem;"></i>
+    </div>
+</div>
+
+<div id="post2Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('post2')">&times;</span>
+        <div class="modal-text">
+            <div class="modal-header">
+                <div class="header-container">
+                    <img src="images/Header_2.jpg" alt="Blog header image" class="modal-header-image">
+                    <div class="title-overlay">
+                        <h2>Border Cultures and Conflicts in Travel</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> May 13, 2024</span>
+                            <span><i class="far fa-user"></i> Yunzhi Zhang</span>
+                            <span><i class="far fa-folder"></i> Travel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Borders, by their very nature, are paradoxical. On one hand, they delineate order—defining nations, cultures, and systems of governance. On the other, they embody tension, acting as sites of negotiation, conflict, and identity. For travelers, borders are more than lines on a map; they are thresholds where security, culture, and personal experience collide. This collision can be enlightening, but it also reveals deeper truths about our world’s divisions and the way we perceive "the other."</p>
+
+            <p>Traveling through borders is not merely a logistical necessity; it is an intimate confrontation with the human-made boundaries that separate us. What do these encounters tell us about global security, cultural exchange, and our shared humanity?</p>
+
+            <p>In the modern world, borders are the physical manifestation of national security. They are policed and fortified to protect against perceived threats—whether it be illegal immigration, smuggling, or even pandemics. For governments, borders are lines of control; for travelers, they are points of vulnerability. A missing document, an overzealous officer, or a misunderstood rule can suddenly turn the crossing into an exercise in anxiety.</p>
+
+            <p>But borders are more than just barriers; they are also mirrors. They reflect the fears, priorities, and prejudices of the nations they divide. The heavily militarized demarcation between North and South Korea speaks to decades of unresolved conflict. Meanwhile, the open borders within the European Union highlight a vision of unity and shared prosperity. For travelers, these contrasts are often stark reminders of the differing ways nations define safety and belonging.</p>
+
+            <p>Borders are not just political constructs—they are cultural frontiers. Often, they are places where two or more ways of life meet, mix, and sometimes clash. For the curious traveler, this can be fascinating. The markets in Tijuana, Mexico, just a stone’s throw from San Diego, showcase a vibrant blend of American and Mexican influences. Similarly, the towns along the Silk Road in Central Asia remain cultural mosaics, bearing traces of the countless traders and travelers who crossed them centuries ago.</p>
+
+            <p>Yet, borders can also magnify differences. Crossing from India into Pakistan, one is struck not only by the physical checkpoints but also by the emotional weight of history. Partition, war, and decades of animosity linger in the air. The famed daily border ceremony at Wagah, with its choreographed aggression and flag-lowering rituals, is equal parts spectacle and metaphor—a reminder of how borders can simultaneously separate and unite.</p>
+
+            <p>Not all border experiences are as theatrical. In some regions, borders are zones of active conflict, where questions of security and identity are violently contested. The ongoing disputes in places like Israel and Palestine or the Kashmir region illustrate how borders can become flashpoints, with dire consequences for those who live near or travel through them.</p>
+
+            <p>Even travelers, often seen as neutral parties, are not immune to these tensions. These moments are humbling, serving as a stark reminder that the freedom to cross borders is a privilege not shared by all.</p>
+
+            <p>For travelers, borders are often spaces of storytelling. Each crossing comes with its own narrative—of unexpected kindness, bureaucratic frustration, or cultural revelation. These stories shape how we understand the world and our place in it.</p>
+
+            <p>However, it is also important to reflect critically on our role as travelers. Tourism is not a neutral act; it is shaped by the very inequalities that borders enforce. While many of us move freely with powerful passports, millions of people are trapped by borders, their mobility restricted by economic, political, or humanitarian crises.</p>
+
+            <p>How can travelers engage with borders responsibly? By being conscious of privilege, by listening to local perspectives, and by understanding the historical and geopolitical contexts of the places we visit.</p>
+
+            <p>In an era of globalization, some dream of a borderless world—a utopia where people, goods, and ideas flow freely. Yet, history cautions against oversimplification. Borders, for all their flaws, also protect. They safeguard cultural identities and offer refuge to those fleeing persecution. The challenge is not to erase borders but to rethink them: to make them less about exclusion and more about connection.</p>
+
+            <p>Traveling through borders is more than a physical act; it is an intellectual and emotional journey. Each crossing forces us to confront questions of identity, security, and belonging. Are borders necessary, or are they artificial constructs that divide us unnecessarily? Can we create a world where crossing a border feels less like an interrogation and more like an invitation?</p>
+
+            <p>The answer lies not only in how governments manage borders but also in how we, as individuals, approach them. By treating borders as spaces of learning rather than barriers, we can challenge their divisive nature. The next time you find yourself at a border—whether it’s a bustling airport or a remote mountain pass—pause for a moment. Consider what that boundary represents, not just for the nations it separates but for the human stories it holds.</p>
+
+            <p>In exploring the boundaries of security, we are ultimately exploring the boundaries of our own understanding. And perhaps, in doing so, we can learn to bridge the divides that borders so often reinforce.</p>
+        </div>
+    </div>
+
+    <div class="like-button">
+        <i class="fas fa-heart" style="color: #e74c3c; font-size: 1.5rem;"></i>
+    </div>
+</div>
+
+<div id="post3Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('post3')">&times;</span>
+        <div class="modal-text">
+            <div class="modal-header">
+                <div class="header-container">
+                    <img src="images/Header_3.jpg" alt="Blog header image" class="modal-header-image">
+                    <div class="title-overlay">
+                        <h2>How the Legacy of Empires Shapes Global Security through an Internationalist Lens</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> June 6, 2024</span>
+                            <span><i class="far fa-user"></i> Yunzhi Zhang</span>
+                            <span><i class="far fa-folder"></i> Security Studies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Empires are not merely relics of history; their legacies remain embedded in the frameworks of modern international relations. While the imperial era has ostensibly passed, the borders, systems, and power dynamics they created continue to influence global security. From enduring conflicts rooted in colonial boundary-making to the emergence of neo-imperial forms of influence, the legacy of empires cannot be understood in isolation. However, by adopting an internationalist perspective, we can move beyond the zero-sum logic of power and work toward a more equitable and cooperative global order.</p>
+
+            <p>Few artifacts of imperial rule have left as significant an imprint on global security as borders. Often drawn arbitrarily by colonial powers, these lines have divided communities, imposed artificial nation-states, and sown the seeds of long-lasting tensions.</p>
+
+            <p>For example, in Africa, the Berlin Conference of 1884-85 allowed European powers to carve up the continent with little regard for ethnic, cultural, or geographical realities. The result was a patchwork of nation-states that forced rival groups into shared political systems or divided cohesive communities across multiple borders. These decisions, made without African voices at the table, have perpetuated conflicts, from the Nigerian Civil War to ongoing tensions in the Great Lakes region.</p>
+
+            <p>Similarly, in the Middle East, the Sykes-Picot Agreement of 1916, crafted by British and French diplomats, redrew the map of the region with little regard for its peoples. The consequences—persistent unrest in Iraq, Syria, and Palestine—are stark reminders of the dangers of unilateral decision-making. The borders imposed during these imperial ventures have become fault lines for some of the world’s most intractable conflicts.</p>
+
+            <p>From an internationalist perspective, these examples underline the need for participatory approaches in addressing border conflicts. The principle of self-determination—enshrined in the UN Charter—must be central to any resolution of disputes rooted in colonial legacies. International cooperation, rather than domination, is the path to lasting peace.</p>
+
+            <p>Though traditional empires have dissolved, their structures persist in the form of neo-imperialism. In today’s world, imperial power is no longer exerted through territorial conquest but through economic dominance, political interventions, and cultural hegemony.</p>
+
+            <p>The United States, often described as the archetype of a modern empire, wields its influence through a vast network of military bases, global financial institutions, and multinational corporations. Meanwhile, China’s Belt and Road Initiative, with its extensive investments in infrastructure across Asia, Africa, and Europe, reflects a new form of imperial ambition—one that critics argue creates economic dependencies disguised as development aid.</p>
+
+            <p>However, an internationalist framework challenges the competitive logic of neo-imperialism. Rather than focusing on unilateral gains, internationalism calls for multilateral institutions to act as mediators and facilitators of equitable development. The question is not which power dominates the world order but how nations can collectively address shared challenges such as climate change, global inequality, and pandemics.</p>
+
+            <p>Empires did not just redraw maps; they also reshaped cultural and intellectual landscapes. The spread of languages like English, French, and Spanish reflects the enduring influence of imperial rule. Today, these languages dominate international diplomacy, trade, and education, often at the expense of indigenous and local languages.</p>
+
+            <p>Similarly, Western legal and political systems, introduced during colonial rule, remain foundational in many countries. While these systems have facilitated modernization in some contexts, they have also marginalized traditional governance structures and ways of life. For example, indigenous land rights movements around the world—from Canada to Australia—highlight the tension between colonial legal frameworks and indigenous sovereignty.</p>
+
+            <p>An internationalist approach to cultural legacies emphasizes inclusivity and mutual respect. This involves not only recognizing the value of diverse traditions but also addressing historical injustices. Initiatives like UNESCO’s efforts to preserve endangered languages and cultures are examples of how international cooperation can counteract the homogenizing tendencies of imperial legacies.</p>
+
+            <p>The legacy of empires intersects with today’s geopolitical shifts as we move toward a multipolar world. Rising powers like China, India, and Brazil are challenging the dominance of traditional Western powers, creating opportunities for a more balanced global order. However, this transition must not replicate the competitive, imperial dynamics of the past.</p>
+
+            <p>Internationalism offers a framework for navigating this transformation. Instead of perpetuating power struggles, it calls for collaboration through institutions like the United Nations, regional organizations, and global civil society networks. Efforts to reform international institutions—to make them more representative and equitable—are essential to ensuring that emerging powers contribute to a cooperative, rather than divisive, world order.</p>
+
+            <p>Empires remind us of the dangers of unchecked power, but they also highlight humanity’s capacity for connection and exchange. If we learn from history and act collectively, the legacy of empires can become not a source of division, but a foundation for global solidarity.</p>
+        </div>
+    </div>
+
+    <div class="like-button">
+        <i class="fas fa-heart" style="color: #e74c3c; font-size: 1.5rem;"></i>
+    </div>
+</div>
+
+<div id="post4Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('post4')">&times;</span>
+        <div class="modal-text">
+            <div class="modal-header">
+                <div class="header-container">
+                    <img src="images/Header_4.jpg" alt="Blog header image" class="modal-header-image">
+                    <div class="title-overlay">
+                        <h2>Cities Where History Meets Modernity: Reflections from Rome to Kyoto</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> Aug 20, 2024</span>
+                            <span><i class="far fa-user"></i> Yunzhi Zhang</span>
+                            <span><i class="far fa-folder"></i> Travel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Cities are places where the old and the new coexist, sometimes in harmony, sometimes in tension. Among them, Rome and Kyoto stand out as luminous examples of how history and modernity intertwine, creating urban spaces that are both timeless and dynamic. While their contexts differ—one a European powerhouse shaped by empires, the other a Japanese cultural capital shaped by centuries of tradition—these cities share a unique ability to straddle eras. To walk their streets is to step into an open dialogue between past and present.</p>
+
+            <p>Rome, famously dubbed the Eternal City, wears its history like a crown. From the monumental ruins of the Colosseum to the grandeur of St. Peter’s Basilica, the city pulsates with the echoes of its imperial and religious past. Yet, what strikes a modern visitor most is not just Rome’s ancient glory but how seamlessly it integrates its history into daily life.</p>
+
+            <p>Strolling through the Roman Forum, one marvels at the architectural achievements of antiquity, only to emerge onto a bustling piazza filled with Vespa scooters and espresso-drinking locals. Rome’s layered urban fabric is a testament to its resilience: medieval churches are built atop Roman temples, Renaissance palaces abut modern office buildings, and even ancient aqueducts still deliver water to the city. History here is not a static relic but a lived experience—a backdrop to contemporary life.</p>
+
+            <p>But Rome is also a city of paradoxes. Its attempts to modernize, from Mussolini’s fascist-era urban planning to contemporary infrastructure projects, have often clashed with its historical character. The debate over how to preserve Rome’s heritage while embracing modernity is ongoing, reflecting broader global questions about urban development and cultural identity.</p>
+
+            <p>In contrast to Rome’s grandeur, Kyoto’s charm lies in its understated elegance. Once the imperial capital of Japan, Kyoto is a city that has managed to retain its historical soul despite the rapid modernization of Japan as a whole. With its meticulously preserved temples, tea houses, and traditional wooden machiya townhouses, Kyoto feels like a city where time flows differently.</p>
+
+            <p>Yet Kyoto, too, is a place of contrasts. The ancient ritual of tea ceremonies exists alongside bustling shopping streets filled with trendy boutiques. The UNESCO-listed Kinkaku-ji (Golden Pavilion) gleams with timeless beauty, but a short train ride away, you find Kyoto Station—a sleek, futuristic hub of glass and steel that symbolizes Japan’s forward-looking ethos.</p>
+
+            <p>Kyoto’s ability to maintain its cultural continuity is partly a result of deliberate policies. Unlike other Japanese cities that were heavily bombed during World War II, Kyoto’s historical architecture was spared, allowing it to preserve its heritage. Additionally, local ordinances restrict building heights and mandate the use of traditional aesthetics in certain districts. This conscious balance between preservation and progress has made Kyoto not just a repository of history but also a model for sustainable urban planning.</p>
+
+            <p>What unites Rome and Kyoto is their ability to make history a living force rather than a static monument. In both cities, history is not confined to museums or guidebooks but permeates the air, the architecture, and even the daily routines of their residents. This dynamic relationship between past and present offers valuable lessons for other cities grappling with rapid urbanization.</p>
+
+            <p>First, these cities show that preserving history does not mean resisting modernity. Rome’s vibrant street life and Kyoto’s innovative urban planning demonstrate that history can coexist with, and even enhance, contemporary culture. Second, they highlight the importance of intentionality in urban development. Both cities have made deliberate choices to protect their heritage, whether through preservation laws or adaptive reuse of historical structures.</p>
+
+            <p>Finally, Rome and Kyoto remind us that cities are not just collections of buildings but living organisms shaped by the people who inhabit them. Their histories are not mere backdrops but active participants in the stories unfolding today. This interplay of old and new gives these cities their unique vitality, offering visitors not just a glimpse into the past but a vision of how history can inform the future.</p>
+
+            <p>As the world becomes increasingly urbanized, the challenge of balancing historical preservation with modern needs grows ever more pressing. Cities like Rome and Kyoto provide blueprints for how this balance can be achieved. They teach us that history is not a burden but a resource—a wellspring of identity, inspiration, and resilience.</p>
+
+            <p>For travelers, these cities offer more than picturesque sights; they offer a chance to reflect on the broader questions of time and change. What does it mean to live in a city where the past is ever-present? How can we ensure that modernization does not erase the stories that define us? These are questions that Rome and Kyoto continue to explore, making them not just destinations but dialogues—between past and present, between history and modernity, and ultimately, between the city and the self.</p>
+
+            <p>To walk through Rome and Kyoto is to journey through time. It is an invitation to pause, to marvel, and to consider how the layers of history shape not just the cities we visit but the lives we lead. And perhaps, in doing so, we find a deeper appreciation for the delicate dance of continuity and change that defines the human experience.</p>
+
+            <p>As these cities continue to grow, they also offer lessons in sustainable development. By prioritizing adaptive reuse of historical structures, integrating green spaces into urban planning, and ensuring that modern infrastructure coexists with cultural heritage, Rome and Kyoto provide models for how cities can thrive without sacrificing their soul. This commitment to sustainability not only preserves the past but also ensures a livable future, making them enduring examples of how urbanization and heritage can work hand in hand.</p>
+        </div>
+    </div>
+
+    <div class="like-button">
+        <i class="fas fa-heart" style="color: #e74c3c; font-size: 1.5rem;"></i>
+    </div>
+</div>
+
+<div id="post5Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('post5')">&times;</span>
+        <div class="modal-text">
+            <div class="modal-header">
+                <div class="header-container">
+                    <img src="images/Header_5.jpg" alt="Blog header image" class="modal-header-image">
+                    <div class="title-overlay">
+                        <h2>Reflecting in the Shadow of War: Lessons from Hiroshima’s Atomic Bomb Site</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> Sep 7, 2024</span>
+                            <span><i class="far fa-user"></i> Yunzhi Zhang</span>
+                            <span><i class="far fa-folder"></i> Travel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Travel has a peculiar way of turning history into something tangible, immediate, and deeply personal. There is something profoundly humbling about standing in places where history unfolded, particularly sites marked by conflict and tragedy. Among the many war relics scattered across the globe, Hiroshima’s Atomic Bomb Dome stands as a stark and haunting reminder of the devastating consequences of war. Yet, it also offers an opportunity to reflect on the resilience of the human spirit and the lessons we must carry forward.</p>
+
+            <p>Hiroshima’s Atomic Bomb Dome, or Genbaku Dome, is not just a preserved ruin—it is a testament to the destructive power of humanity and, paradoxically, to its hope for peace. As you approach the site, it is impossible not to feel the weight of what happened there on August 6, 1945, when the world’s first atomic bomb used in warfare obliterated the city. The skeletal remains of the building stand as a silent witness to that moment of horror, frozen in time amid the surrounding vibrancy of modern Hiroshima.</p>
+
+            <p>Yet, the Dome’s stillness is striking. It invites reflection rather than confrontation, contemplation rather than condemnation. Visitors from around the world walk quietly along its perimeter, some clutching flowers, others gazing silently at the ruins. It is not a site of blame but of remembrance—a space designed to remind us of the consequences of unchecked power and the fragility of human life.</p>
+
+            <p>Visiting war sites like the Atomic Bomb Dome transforms historical facts into human experiences. It’s one thing to read about the bomb that killed over 140,000 people; it’s another to stand on the very ground where lives were forever changed. The nearby Hiroshima Peace Memorial Museum amplifies this experience, presenting stories of survivors, photographs of the devastation, and artifacts melted by the bomb’s heat.</p>
+
+            <p>What makes the Hiroshima site particularly compelling is its focus on storytelling. Instead of glorifying conflict or dwelling on blame, it tells human stories—of children walking to school, of families eating breakfast, of ordinary lives interrupted in the most extraordinary way. These personal narratives make the past feel immediate, creating a visceral connection between the visitor and history.</p>
+
+            <p>Hiroshima’s modernity is another layer of its story. Today, it is a bustling, thriving city with skyscrapers, electric streetcars, and lively markets. The contrast between the devastation of 1945 and the vitality of present-day Hiroshima is staggering. It is a testament to humanity’s ability to rebuild—not just physically, but emotionally and culturally.</p>
+
+            <p>However, this progress is also a reminder of the duality of human innovation. The same ingenuity that rebuilt Hiroshima also created the bomb that destroyed it. This paradox forces us to grapple with difficult questions about the nature of technological advancement and its ethical implications. Just because we can achieve something, should we? Hiroshima challenges us to consider not only the consequences of our actions but also the values that guide them.</p>
+
+            <p>Although Hiroshima’s story is deeply rooted in Japanese history, its lessons are universal. It speaks to the dangers of nationalism, the catastrophic potential of war, and the urgency of peacebuilding. The city has embraced these lessons, becoming a global advocate for nuclear disarmament.</p>
+
+            <p>The annual Hiroshima Peace Memorial Ceremony, held every August 6, is a poignant reminder of this mission. Survivors, world leaders, and citizens gather to honor the victims and reaffirm their commitment to ensuring such tragedies are never repeated. The ringing of the Peace Bell, echoing across the city, is a call to action—not just for Japan, but for the entire world.</p>
+
+            <p>Visiting a war site like Hiroshima comes with a responsibility: to listen, to learn, and to carry its lessons forward. It is easy to approach such places as passive observers, snapping photos and ticking boxes on a travel itinerary. But war sites demand more from us. They require us to engage actively with history, to question our assumptions, and to consider how the past informs the present.</p>
+
+            <p>Hiroshima is not a city that clings to its wounds, nor is it one that seeks to erase its scars. Instead, it offers itself as a teacher, asking visitors to reflect on their own role in the broader narrative of peace and conflict. What choices are we making today that will shape the world of tomorrow?</p>
+
+            <p>Hiroshima’s Atomic Bomb Dome is more than a reminder of a dark chapter in history; it is a beacon of hope, resilience, and the enduring pursuit of peace. Standing beneath its crumbling frame, it becomes clear that history is not something distant or abstract. It lives in the places we visit, the stories we hear, and the lessons we choose to carry forward.</p>
+
+            <p>To travel to Hiroshima is to confront the complexity of humanity—our capacity for destruction and for healing, for innovation and for compassion. And perhaps, in standing on this hallowed ground, we come to understand that remembering the past is not just about honoring the dead. It is about committing to a future where such tragedies are never repeated.</p>
+
+            <p>In the end, Hiroshima’s lesson is simple yet profound: peace is not a given. It is a choice—one we must make, and remake, every day.</p>
+        </div>
+    </div>
+
+    <div class="like-button">
+        <i class="fas fa-heart" style="color: #e74c3c; font-size: 1.5rem;"></i>
+    </div>
+</div>
+
+<div id="post6Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('post6')">&times;</span>
+        <div class="modal-text">
+            <div class="modal-header">
+                <div class="header-container">
+                    <img src="images/Header_6.jpg" alt="Blog header image" class="modal-header-image">
+                    <div class="title-overlay">
+                        <h2>Navigating Cross-Cultural Adaptation and Challenges</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> Oct 1, 2024</span>
+                            <span><i class="far fa-user"></i> Yunzhi Zhang</span>
+                            <span><i class="far fa-folder"></i> Life</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>As someone who has spent much of my life moving between cultures, I’ve come to think of cross-cultural adaptation not as a single event but as an ongoing process—a dynamic, sometimes messy dance between discovery and discomfort. My journey has taken me from growing up in China, to high school years spent in Australia, and now to graduate studies in the United States. Along the way, I’ve experienced the exhilaration and the challenges of immersing myself in environments vastly different from what I once considered “home.”</p>
+
+            <p>Living and studying across these cultural landscapes has shaped my understanding of what it means to truly belong—or perhaps, what it means to thrive in spaces where belonging feels elusive. In graduate school, where diversity and global perspectives are often celebrated, I’ve found that the experience of adapting to new cultures is as much about personal growth as it is about professional development.</p>
+
+            <p>One of the most profound lessons I’ve learned in this journey is that “home” is not a static concept. Growing up in China, I had a clear sense of what it meant to belong—to a language, a culture, and a way of life. Moving to Australia during high school reshaped that. I vividly remember the initial culture shock: the informality of everyday interactions, the way people seemed to genuinely enjoy small talk, and the strange sense of independence expected of teenagers.</p>
+
+            <p>By the time I moved to the United States for graduate studies, I had grown accustomed to navigating cultural differences. Yet, the experience was different again. The U.S. academic environment’s emphasis on debate and individual expression brought challenges of its own. How do you confidently assert your voice in a room full of people who seem to have mastered the art of intellectual sparring? How do you adapt without losing the nuances of your cultural identity?</p>
+
+            <p>This sense of "in-betweenness"—of being shaped by multiple cultures but not entirely rooted in any single one—can be unsettling. Yet, it’s also liberating. I’ve learned to find home not in a place, but in the connections I build and the lessons I carry with me.</p>
+
+            <p>Graduate school, particularly in a field like global security, is an intense, diverse, and fascinating microcosm of the world. In seminar discussions, I’ve debated policy issues with classmates from Europe, the Middle East, and Latin America, each of us bringing perspectives shaped by our cultural and national contexts. These conversations are not always comfortable. Sometimes, a statement that feels neutral to one person lands as controversial to another. At other times, our differences of opinion reflect deeper values shaped by the places we call home.</p>
+
+            <p>But therein lies the beauty of this globalized experience. It forces you to question your assumptions, to see the world through the lens of others, and to engage with the complexity of global issues in a way that no textbook ever could. I’ve learned that listening is as important as speaking, and that empathy is a skill as critical as analysis.</p>
+
+            <p>Cross-cultural adaptation, particularly in an academic setting, is about balance. On the one hand, you need to adapt to the norms and expectations of your new environment. On the other hand, you need to remain grounded in your own identity.</p>
+
+            <p>There have been moments when I’ve struggled with this balance—whether it’s adjusting to the hyper-individualism of American academic culture or finding ways to explain the nuanced perspectives I bring from my own background. Yet, these struggles have taught me resilience and adaptability.</p>
+
+            <p>For example, I’ve found value in embracing aspects of my heritage that set me apart. My background allows me to approach global security issues with a different lens—one informed by growing up in a country that has seen rapid transformation and by living in cultures that emphasize community over the individual. This dual perspective is not a weakness; it’s a strength.</p>
+
+            <p>If there’s one thing my cross-cultural journey has taught me, it’s that adaptation is not about erasing differences—it’s about embracing them. It’s about finding ways to connect across cultures while remaining authentic to who you are.</p>
+
+            <p>This journey has also deepened my appreciation for the importance of creating inclusive spaces. As someone who has experienced both the empowerment and isolation that come with navigating different cultures, I understand how critical it is for institutions to foster environments where everyone feels valued. Whether it’s through mentorship, community-building, or simply creating spaces where diverse perspectives are genuinely welcomed, these efforts matter.</p>
+
+            <p>Graduate school has reinforced one of the most valuable lessons I’ve learned from my global journey: that the real growth happens not in the moments when you feel comfortable, but in the moments when you are stretched, challenged, and humbled by the vastness of the world.</p>
+
+            <p>Ultimately, the global graduate experience is about more than earning a degree. It’s about learning to navigate the spaces in between—between cultures, identities, and perspectives—and emerging not just as a scholar, but as someone who is ready to contribute to a more connected, empathetic, and inclusive world.</p>
+        </div>
+    </div>
+
+    <div class="like-button">
+        <i class="fas fa-heart" style="color: #e74c3c; font-size: 1.5rem;"></i>
+    </div>
+</div>
+
+<div id="post7Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('post7')">&times;</span>
+        <div class="modal-text">
+            <div class="modal-header">
+                <div class="header-container">
+                    <img src="images/Header_7.jpg" alt="Blog header image" class="modal-header-image">
+                    <div class="title-overlay">
+                        <h2>The Intersection of Global Security and Historical Inquiry: How the Past Shapes the Future</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> Oct 19, 2024</span>
+                            <span><i class="far fa-user"></i> Yunzhi Zhang</span>
+                            <span><i class="far fa-folder"></i> Security Studies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Global security is often framed as a forward-looking field, preoccupied with emerging threats, technological advancements, and strategies for maintaining peace in an unpredictable world. History, on the other hand, is often seen as the study of what has already happened—a reflection on events that no longer hold sway over the present. Yet, to view them as separate disciplines is to miss a crucial truth: the past and the future are inextricably linked.</p>
+
+            <p>The study of history is not just about understanding what happened; it’s about uncovering the patterns, decisions, and dynamics that continue to shape our world. Global security, in turn, cannot be effectively pursued without an appreciation of the historical forces that underlie contemporary conflicts and alliances. The past is not a relic—it is a roadmap, a resource, and a warning.</p>
+
+            <p>Many of today’s global security challenges are rooted in historical grievances, unresolved conflicts, and colonial legacies. To address these issues without understanding their origins is akin to treating symptoms without diagnosing the underlying disease.</p>
+
+            <p>Take the Middle East, for example. The conflicts in Iraq, Syria, and Palestine are often discussed in terms of religious extremism, geopolitical rivalry, or resource competition. But these crises cannot be fully understood without acknowledging the role of European colonialism in the early 20th century. The Sykes-Picot Agreement of 1916 divided the region into arbitrary spheres of influence, ignoring cultural, tribal, and religious dynamics. This act sowed seeds of distrust and instability that continue to shape the region’s geopolitics.</p>
+
+            <p>Similarly, the ethnic tensions that have fueled conflicts in Rwanda, the Balkans, and Myanmar have historical roots in colonial practices of divide-and-rule or in long-standing grievances that were never resolved. By studying these histories, policymakers and security experts can better anticipate flashpoints and design strategies that address not only the symptoms of conflict but also their root causes.</p>
+
+            <p>History is replete with lessons about power dynamics, diplomacy, and the consequences of short-term thinking. One of the clearest examples is the Treaty of Versailles, which ended World War I. While it sought to secure peace, its punitive terms against Germany laid the groundwork for resentment and economic hardship, ultimately contributing to the rise of Adolf Hitler and the outbreak of World War II. This serves as a cautionary tale for how peace agreements, if not carefully designed, can inadvertently set the stage for future conflicts.</p>
+
+            <p>On the other hand, history also offers examples of successful conflict resolution. The Marshall Plan, implemented after World War II, not only rebuilt Europe’s economy but also fostered long-term alliances and stability. By investing in the reconstruction of war-torn nations, the United States recognized that security was not just about military strength but also about economic resilience and political collaboration.</p>
+
+            <p>The Cold War provides another rich source of historical lessons. The strategies of containment, deterrence, and arms control agreements like the INF Treaty demonstrate how rival powers can manage tensions without descending into open conflict. These lessons are particularly relevant in today’s context of rising great-power competition between the United States and China, as well as the resurgence of Russia as a disruptive force on the global stage.</p>
+
+            <p>Failing to account for history in global security decisions often leads to disastrous outcomes. The U.S.-led invasion of Iraq in 2003 is a stark example. The decision to dismantle Iraq’s Ba’athist government without understanding the country’s sectarian complexities created a power vacuum that was quickly filled by extremist groups like ISIS. This miscalculation was, in part, a failure to consider Iraq’s modern history, including its fragile balance of Sunni, Shia, and Kurdish populations.</p>
+
+            <p>Similarly, interventions in Afghanistan, Libya, and other conflict zones often suffer from a lack of historical awareness. Policies are designed based on immediate objectives—defeating an insurgency, toppling a regime—without a long-term understanding of how local histories, tribal politics, and societal structures will react to foreign interference. The result is often instability that outlasts the intervention itself.</p>
+
+            <p>While history cannot predict the future with precision, it can illuminate patterns and trajectories. For instance, the historical cycles of rising and falling great powers offer insights into today’s shifting global order. The Thucydides Trap—a concept derived from the ancient historian’s account of the Peloponnesian War—warns of the potential for conflict when a rising power threatens an established one. This framework is frequently invoked to analyze the U.S.-China rivalry, helping policymakers anticipate areas of tension and opportunities for diplomacy.</p>
+
+            <p>In the realm of cybersecurity, history also provides valuable lessons. Just as nations during the Industrial Revolution struggled to adapt to the rapid pace of technological change, today’s leaders face the challenge of managing the risks of artificial intelligence, quantum computing, and cyberwarfare. By studying historical transitions—whether in technology, governance, or warfare—we can better prepare for the challenges of our own era.</p>
+
+            <p>Beyond strategy and policy, history reminds us of the human dimension of global security. It tells the stories of those who have lived through wars, migrations, and upheavals, offering a perspective that numbers and statistics cannot capture. This human element is essential for crafting policies that are not only effective but also just.</p>
+
+            <p>For example, historical accounts of the civilian experience during World War II—whether in Hiroshima, Dresden, or Nanjing—underscore the importance of protecting non-combatants in modern warfare. These stories challenge us to think critically about the ethical dimensions of security, from drone strikes to refugee policies.</p>
+
+            <p>The intersection of history and global security is not just about learning from the past—it’s about using that knowledge to shape a more stable and equitable future. This requires a mindset that values historical context as much as data analytics and military strategy. It means bringing historians into conversations about security policy, ensuring that decisions are informed by a deep understanding of how we got here.</p>
+
+            <p>It also requires humility. History shows us that even the most powerful empires and institutions are not immune to decline. It reminds us that security is not a zero-sum game but a shared endeavor, one that depends on cooperation, resilience, and a long-term vision.</p>
+
+            <p>As we navigate the complexities of global security in the 21st century, history remains one of our most valuable tools. It provides context for understanding today’s challenges, warns against the pitfalls of short-term thinking, and offers inspiration for crafting solutions that endure.</p>
+
+            <p>The past may not hold all the answers, but it does hold the questions we must ask if we are to build a future that is not only secure but also just. The intersection of history and global security is not just academic—it is deeply practical. Because the future, as uncertain as it may be, will always be shaped by the echoes of the past.</p>
+
+            <p>And if we listen closely, those echoes might just guide us toward a better world.</p>
+        </div>
+    </div>
+
+    <div class="like-button">
+        <i class="fas fa-heart" style="color: #e74c3c; font-size: 1.5rem;"></i>
+    </div>
+</div>
+
+<div id="post8Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('post8')">&times;</span>
+        <div class="modal-text">
+            <div class="modal-header">
+                <div class="header-container">
+                    <img src="images/Header_8.jpg" alt="Blog header image" class="modal-header-image">
+                    <div class="title-overlay">
+                        <h2>Personal Environmental Action and International Impact</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> Nov 27, 2024</span>
+                            <span><i class="far fa-user"></i> Yunzhi Zhang</span>
+                            <span><i class="far fa-folder"></i> Security Studies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>When we think of global security, we often picture armed conflicts, international diplomacy, or economic sanctions. Rarely do we associate it with the mundane choices we make every day—what we eat, how we commute, or the amount of waste we produce. Yet, in an interconnected world where climate change poses an existential threat, the boundary between personal action and global impact has become increasingly blurred.</p>
+
+            <p>The question we should be asking ourselves is this: How do the seemingly small decisions in our daily lives contribute to or detract from global security? And can personal environmental responsibility genuinely influence the bigger picture of international stability?</p>
+
+            <p>To understand how personal action connects to global security, we need to first recognize the ways in which climate change is reshaping the world’s geopolitical landscape. Rising sea levels, more frequent natural disasters, and resource scarcity are not just environmental issues; they are security issues. Indeed, I believe that climate change could serve as a significant catalyst for deeper globalization, as its challenges transcend borders and demand a unified, collective response from humanity.</p>
+
+            <p>For example, regions like the Sahel in Africa are already witnessing the destabilizing effects of climate change. Prolonged droughts have led to food insecurity, which in turn fuels conflict and migration. Similarly, small island nations in the Pacific face existential threats as rising seas encroach on their land, forcing them to negotiate for survival on the international stage.</p>
+
+            <p>These are not isolated cases. Climate-induced migration, competition for dwindling resources, and the increasing strain on governments to manage these crises are creating ripple effects that extend far beyond national borders. The conclusion is clear: mitigating climate change is not just about protecting the environment—it’s about safeguarding peace and stability on a global scale.</p>
+
+            <p>It’s easy to feel insignificant in the face of such massive, systemic issues. After all, what can one person do about melting glaciers or deforestation in the Amazon? But framing the question this way ignores the cumulative power of collective action.</p>
+
+            <p>Consider something as simple as dietary choices. A shift toward plant-based diets has been shown to significantly reduce greenhouse gas emissions. If enough individuals make this shift, the ripple effects could include reduced pressure on agricultural systems, fewer emissions from livestock, and even changes in global food markets. Similarly, opting for public transport or cycling instead of driving can reduce urban air pollution and lower a city’s carbon footprint.</p>
+
+            <p>These choices may seem small in isolation, but they gain momentum when adopted collectively. Moreover, individual actions often serve as a catalyst for larger systemic changes. Consumer demand for sustainable products, for example, has pushed corporations to adopt greener practices, from reducing plastic packaging to investing in renewable energy.</p>
+
+            <p>Personal environmental actions don’t just influence markets—they also shape policy. Governments are increasingly responsive to grassroots movements advocating for sustainability. The Fridays for Future campaign, spearheaded by Greta Thunberg, is a testament to how individual voices can spark global conversations and drive political action.</p>
+
+            <p>On a smaller scale, community-led initiatives like urban gardening projects or zero-waste movements create models of sustainability that can be scaled up. These local efforts often inform policy decisions, demonstrating what is possible and inspiring broader implementation.</p>
+
+            <p>For instance, cities like Copenhagen and Amsterdam, now heralded as leaders in green urban planning, started with local citizen-driven projects decades ago. Today, these cities not only serve as models for sustainable living but also contribute to global conversations on climate resilience and urban security.</p>
+
+            <p>From a global security perspective, the argument for personal environmental responsibility is not just practical; it’s ethical. Those of us in more privileged circumstances—where access to green technologies, sustainable products, and eco-friendly alternatives is readily available—have a responsibility to act.</p>
+
+            <p>This is especially true given the disproportionate impact of climate change on vulnerable populations. People in developing nations often bear the brunt of environmental degradation, despite contributing the least to global emissions. When we choose to reduce our carbon footprint, we are not just helping the planet; we are contributing to a more equitable and secure world.</p>
+
+            <p>One of the most fascinating aspects of this dynamic is the feedback loop between individual actions and international policies. When citizens demand sustainability, businesses and governments take notice. This, in turn, creates an environment where sustainable choices become more accessible and affordable, encouraging even more people to adopt them.</p>
+
+            <p>For example, the global push for renewable energy started with small-scale projects and early adopters. Today, it’s a central focus of international agreements like the Paris Accord, with countries committing to reduce emissions and transition to cleaner energy. Without the groundwork laid by individuals and local communities, such commitments might never have materialized.</p>
+
+            <p>Of course, individual actions are not a panacea. Systemic change is essential, and this requires international cooperation, technological innovation, and political will. However, dismissing the power of personal responsibility risks falling into fatalism—a dangerous mindset in the face of a challenge as urgent as climate change.</p>
+
+            <p>The key is to strike a balance between optimism and realism. Individual efforts must be accompanied by advocacy for systemic change, whether that means voting for leaders committed to sustainability, supporting organizations working on climate justice, or participating in public demonstrations.</p>
+
+            <p>Viewing personal environmental action through the lens of global security reframes the way we think about our daily lives. It reminds us that the choices we make—what we buy, how we travel, and even how we dispose of waste—are not isolated acts. They are part of a larger tapestry that connects local behavior to global outcomes.</p>
+
+            <p>As individuals, we may not be able to rewrite the trajectory of global security on our own. But together, through collective action and intentional choices, we can create the ripple effects that shape a more sustainable, equitable, and peaceful world.</p>
+        </div>
+    </div>
+
+    <div class="like-button">
+        <i class="fas fa-heart" style="color: #e74c3c; font-size: 1.5rem;"></i>
+    </div>
+</div>
+
+<div id="post9Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('post9')">&times;</span>
+        <div class="modal-text">
+            <div class="modal-header">
+                <div class="header-container">
+                    <img src="images/Header_9.jpg" alt="Blog header image" class="modal-header-image">
+                    <div class="title-overlay">
+                        <h2>The Legacy of Colonialism and Its Impact on Contemporary Global Security</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> Dec 22, 2024</span>
+                            <span><i class="far fa-user"></i> Yunzhi Zhang</span>
+                            <span><i class="far fa-folder"></i> Security Studies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Colonialism is often discussed in history classrooms as though it belongs to a distant past, an era of empires and conquests now confined to textbooks and museum exhibits. However, the legacy of colonialism is far from dead. Its political, economic, and cultural remnants continue to shape the contours of international relations and global security in profound ways. From arbitrarily drawn borders to economic disparities and lingering societal tensions, colonialism’s shadow looms over many of the crises and challenges we face today.</p>
+
+            <p>This is not just an abstract idea for me—it’s something I’ve grappled with firsthand. Having spent formative years in Australia, I’ve seen how the colonial past continues to affect Indigenous communities and how the ongoing process of decolonization intersects with global narratives. It is this lived experience, combined with a deepening understanding of international security, that has made me realize how profoundly colonial legacies continue to shape the world we live in.</p>
+
+            <p>One of the most visible and contentious legacies of colonialism lies in the borders it created. During the colonial era, European powers drew boundaries with little regard for the ethnic, cultural, or linguistic realities of the people they governed. The infamous "Scramble for Africa" partitioned the continent into artificial nation-states, lumping rival groups together while splitting cohesive communities apart.</p>
+
+            <p>These arbitrary borders have had devastating consequences. In Africa, for example, post-independence conflicts such as those in Nigeria, Rwanda, and Sudan can be traced back to colonial boundary-making. In the Middle East, the Sykes-Picot Agreement of 1916 carved up the region into zones of influence, sowing seeds of instability that still fuel conflict today.</p>
+
+            <p>While borders are a literal legacy of colonialism, its cultural and societal impacts are often just as profound. Living in Australia exposed me to the ongoing struggles of its First Nations peoples, who continue to seek recognition, justice, and sovereignty. From the dispossession of land to the intergenerational trauma caused by policies like the Stolen Generations, the colonial past is deeply entwined with the present.</p>
+
+            <p>One of the most striking realizations for me came from studying the Australian government’s land acknowledgments and reconciliation efforts. These efforts, while symbolically significant, often stand in stark contrast to the structural inequalities that persist. Indigenous communities face higher rates of poverty, incarceration, and health disparities, reflecting a colonial system that was never fully dismantled.</p>
+
+            <p>At the same time, I was inspired by the resilience and activism of Indigenous Australians. Movements for decolonization—whether through the arts, education, or advocacy—highlight the importance of reclaiming agency and challenging colonial narratives. For me, these local struggles connected to global questions: How do nations built on colonial foundations reconcile their past while building an inclusive future? How does decolonization, as both a process and a mindset, fit into the broader pursuit of global security?</p>
+
+            <p>Colonialism was as much about extraction as it was about domination. Colonized territories were often stripped of their natural resources, with little investment in local development or infrastructure beyond what served imperial interests. When these nations gained independence, they were left with economies designed to export raw materials rather than foster industrial growth or self-sufficiency.</p>
+
+            <p>This economic model has proven remarkably persistent. Today, many former colonies remain trapped in cycles of dependency, supplying raw materials to wealthier nations while importing finished goods at higher costs. The resulting economic inequalities perpetuate global insecurity, fueling migration, social unrest, and even terrorism.</p>
+
+            <p>In Australia, I also witnessed how colonialism shaped cultural hierarchies. The dominance of English and Western educational frameworks often marginalizes Indigenous languages and knowledge systems. These same patterns can be seen globally, from the suppression of local cultures during the colonial era to the struggles of post-colonial societies to assert their identities in a globalized world.</p>
+
+            <p>In many ways, the work of decolonization is not just about reclaiming physical resources—it’s about restoring cultural agency. The Indigenous stories and traditions I encountered in Australia helped me appreciate how history is more than what’s written in textbooks. It’s also what lives on in oral traditions, art, and collective memory, despite centuries of attempted erasure.</p>
+
+            <p>The legacy of colonialism is a global issue, and addressing it requires both local and international efforts. Australia’s ongoing debates around decolonization, treaties, and land rights offer valuable lessons for how nations can grapple with their colonial pasts. While these processes are often messy and slow, they highlight the importance of listening to marginalized voices and prioritizing justice over convenience.</p>
+
+            <p>Globally, the same principles apply. Former colonial powers must reckon with their historical responsibilities, not only through symbolic acts but also through tangible reforms—whether that means addressing economic inequalities, returning cultural artifacts, or supporting climate resilience in vulnerable regions.</p>
+
+            <p>At the same time, rising powers and former colonies have an opportunity to reshape the global order. By centering equity, sustainability, and mutual respect, they can challenge the hierarchies inherited from colonialism and create a more inclusive framework for international security.</p>
+
+            <p>Living in Australia and witnessing its struggles with decolonization gave me a unique lens through which to view global security. It reminded me that colonialism is not just a chapter in history—it is a force that continues to shape our world in ways both visible and hidden.</p>
+
+            <p>Whether we are addressing the lasting inequalities of colonial borders, advocating for Indigenous rights, or confronting the global impact of climate change, the work of dismantling colonial legacies is far from over. But in recognizing these legacies, we also gain an opportunity to rewrite them.</p>
+
+            <p>The past cannot be changed, but it can inform how we build the future. And if we are to achieve true global security, that future must be one where justice, equity, and mutual understanding take precedence over power and domination. For me, this journey of reflection is ongoing—a reminder that even in the most complex challenges, there is always room for hope and action.</p>
+        </div>
+    </div>
+
+    <div class="like-button">
+        <i class="fas fa-heart" style="color: #e74c3c; font-size: 1.5rem;"></i>
+    </div>
+</div>
+
+<div id="post10Modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('post10')">&times;</span>
+        <div class="modal-text">
+            <div class="modal-header">
+                <div class="header-container">
+                    <img src="images/Header_10.jpg" alt="Blog header image" class="modal-header-image">
+                    <div class="title-overlay">
+                        <h2>The Historical Roots of Cross-Cultural Conflicts and the Challenges of Modern Globalization</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> Jan 23, 2025</span>
+                            <span><i class="far fa-user"></i> Yunzhi Zhang</span>
+                            <span><i class="far fa-folder"></i> History</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>In an increasingly interconnected world, we are told that globalization is knitting humanity closer together, dissolving boundaries and fostering mutual understanding. Yet, the reality is more complicated. Beneath the surface of cultural exchanges and international collaboration lies a persistent undercurrent of cross-cultural conflicts. These tensions—whether sparked by religion, identity, or historical grievances—are not just contemporary phenomena but have roots that stretch deep into history.</p>
+
+            <p>To understand the challenges of globalization, we must first explore the historical roots of cross-cultural conflict. Why do ancient divisions persist in a world that appears, at least on the surface, to be more united than ever?</p>
+
+            <p>History is littered with examples of cultural clashes that have left deep scars on societies. Many of these conflicts were born not out of inherent cultural incompatibility but from power struggles, exploitation, and attempts to impose dominance.</p>
+
+            <p>Colonialism is one of the most significant historical drivers of cross-cultural conflict. European empires, in their quest for wealth and dominance, imposed their languages, religions, and governance structures on vast regions of Africa, Asia, and the Americas. This often came at the expense of local traditions, social systems, and identities.</p>
+
+            <p>For instance, the British Empire’s promotion of English over indigenous languages in India, combined with the imposition of Western legal and political frameworks, disrupted centuries-old cultural practices. Similarly, the forced Christianization of indigenous populations in Latin America erased or marginalized entire belief systems.</p>
+
+            <p>These acts of cultural erasure and domination have left legacies of resentment and division. Even today, debates over the repatriation of looted artifacts, language preservation, and indigenous rights reflect the unresolved tensions of this era.</p>
+
+            <p>Religion has often been at the heart of cross-cultural conflicts. The Crusades, for example, were not merely wars over territory but also clashes between two distinct religious and cultural worldviews—Christian Europe and the Islamic world. The scars of such conflicts are visible even in modern geopolitics, where tensions in regions like the Middle East often draw upon centuries-old divisions.</p>
+
+            <p>Similarly, the Protestant Reformation and the subsequent wars of religion in Europe illustrate how even within a single civilization, divergent interpretations of faith can fuel deep societal fractures. These historical conflicts remind us that cultural tensions often arise when differences are viewed as threats rather than opportunities for dialogue.</p>
+
+            <p>Not all cross-cultural interactions have been violent. The Silk Road, which connected the East and West, is often celebrated as a symbol of cultural exchange and mutual enrichment. However, even this vibrant network of trade was not free from conflict. Disputes over trade routes, competition between empires, and the spread of diseases like the Black Death revealed the fragility of such connections.</p>
+
+            <p>These examples highlight a critical point: while cultural exchange has the potential to foster understanding, it also carries risks, particularly when economic or political interests are at stake.</p>
+
+            <p>Fast forward to today, and globalization has amplified both the opportunities for cultural understanding and the risks of cross-cultural conflict. The internet, international trade, and mass migration have brought people closer together than ever before. Yet, they have also exposed fault lines that history left behind.</p>
+
+            <p>One of the paradoxes of globalization is that it promotes cultural homogenization while simultaneously provoking resistance to it. The spread of Western brands, entertainment, and values is often viewed as a threat to local traditions and identities. This has led to pushback in the form of nationalism and cultural revival movements.</p>
+
+            <p>For example, the dominance of English in global communication is both a unifying force and a source of tension. While it facilitates international collaboration, it also marginalizes non-English-speaking cultures, creating a sense of cultural erosion. This tension is evident in countries like France, where efforts to protect the French language from the encroachment of English are as much about preserving national identity as they are about linguistics.</p>
+
+            <p>Mass migration, whether driven by conflict, climate change, or economic opportunity, is another flashpoint of modern cross-cultural conflict. Host countries often struggle to balance integration with the preservation of social cohesion, while migrants face the challenge of adapting to new environments without losing their cultural roots.</p>
+
+            <p>The rise of anti-immigration sentiment in many Western nations reflects deep anxieties about cultural change. These fears are not new—they echo historical examples of scapegoating and exclusion—but they are now amplified by the speed and scale of global migration.</p>
+
+            <p>Technology is often hailed as a bridge between cultures, yet it can just as easily become a tool for division. Social media platforms, for instance, enable the rapid spread of misinformation and stereotypes, fueling misunderstandings and prejudices. At the same time, algorithms that reinforce echo chambers can deepen cultural divides rather than bridging them.</p>
+
+            <p>If history teaches us anything, it is that cross-cultural conflicts are not inevitable. They arise when differences are weaponized for political or economic gain, or when opportunities for dialogue are ignored. So how can we apply these lessons to navigate the challenges of modern globalization?</p>
+
+            <p>First, education and historical awareness are critical tools in addressing cross-cultural conflicts. Understanding the historical roots of these tensions allows us to approach them with empathy and informed perspectives. Education systems should prioritize teaching global history in a way that emphasizes interconnectedness and shared humanity rather than division. For example, acknowledging colonial histories and their ongoing impacts helps societies come to terms with the past and provides the foundation for reconciliation. A curriculum that explores the complexities of cultural exchanges, rather than presenting simplified narratives of conflict, can foster a more nuanced understanding of the world.</p>
+
+            <p>Second, the process of globalization must be made more inclusive. For globalization to succeed without exacerbating cultural tensions, it needs to respect and value diverse cultural perspectives rather than subsuming them under a single dominant narrative. This includes amplifying marginalized voices in global institutions such as the United Nations and creating equitable opportunities for participation in international decision-making. Inclusivity can also extend to economic systems, ensuring that globalization’s benefits are distributed fairly and not concentrated among wealthier nations at the expense of historically exploited ones.</p>
+
+            <p>Another key lesson from history is the importance of creating platforms for dialogue. Many cross-cultural conflicts stem from a lack of understanding, and fostering opportunities for dialogue can build bridges rather than deepen divides. These platforms can operate at multiple levels—local, national, or international. For example, grassroots community initiatives can promote mutual understanding, while international cultural programs such as UNESCO’s World Heritage initiatives demonstrate how celebrating cultural diversity can strengthen global security. Dialogue allows people to confront their biases, find common ground, and humanize those who might otherwise seem distant or unfamiliar.</p>
+
+            <p>Finally, we must recognize the dual role of technology in cross-cultural interactions. While technology has often been a tool for division, it also holds immense potential for fostering connection. When used thoughtfully, digital platforms can enable people to collaborate and share experiences across borders, breaking down stereotypes and building empathy. Virtual exchanges between schools, cross-cultural online forums, and collaborative global projects are just a few examples of how technology can facilitate understanding. However, this requires intentional design and governance to prevent misinformation and the creation of divisive echo chambers.</p>
+
+            <p>By learning from history and adopting these strategies, we can tackle the challenges of globalization and cross-cultural conflict. The past provides us with valuable lessons—not only about the mistakes we must avoid but also about the possibilities for a future built on mutual respect and cooperation.</p>
+        </div>
+    </div>
+
+    <div class="like-button">
+        <i class="fas fa-heart" style="color: #e74c3c; font-size: 1.5rem;"></i>
+    </div>
+</div>
+
+    <script>
+        function openModal(projectId) {
+            document.getElementById(projectId + 'Modal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+
+        function closeModal(projectId) {
+            document.getElementById(projectId + 'Modal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling when modal is closed
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.getElementsByClassName('modal');
+                for (let modal of modals) {
+                    if (modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
