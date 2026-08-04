@@ -236,6 +236,8 @@ a.pub:hover::after{opacity:1;transform:translateX(0)}
 .article-body ul,.article-body ol{margin:0 0 1.35rem;padding-left:1.4rem}
 .article-body li{margin:0 0 .6rem;padding-left:.25rem}
 .article-body li::marker{color:var(--accent)}
+.article-body a{color:var(--gold-dk);text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:1px;text-underline-offset:3px}
+.article-body a:hover{color:var(--gold);text-decoration-thickness:2px}
 .article-body strong{color:var(--ink);font-weight:600}
 .article-body em{font-style:italic}
 .article-body blockquote{border-left:2px solid var(--accent);padding:2px 0 2px 20px;margin:1.6rem 0;color:var(--ink)}
