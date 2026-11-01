@@ -5,11 +5,11 @@
 <script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects & Leadership, Yunzhi (Wendy) Zhang</title>
-<meta name="description" content="Projects and leadership by Yunzhi (Wendy) Zhang, ONE-AGI, policy databases, and community work.">
+<meta name="description" content="Projects and leadership by Yunzhi (Wendy) Zhang: ONE-AGI, policy databases, data projects, and community work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=12">
+<link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
 <div class="topbar"></div>
@@ -25,11 +25,11 @@
 </div></header>
 
 <main>
-<section>
+<section style="padding-bottom:0">
   <div class="wrap">
   <div class="sec-head reveal"><p class="kicker"><span class="sec-num">01</span> Projects &amp; leadership</p><h2>Building, not just analyzing</h2><div class="rule"></div></div>
   </div>
-  <ol class="projlist">
+  <ol class="projlist" style="margin-bottom:0">
     <li class="proj reveal">
       <div class="proj-idx">
         <span class="proj-num">01</span>
@@ -93,9 +93,45 @@
       </div>
     </li>
   </ol>
+</section>
 
-  <div class="wrap">
-  <div class="sec-head reveal" style="margin-top:3.2rem"><p class="kicker"><span class="sec-num">02</span> Community &amp; service</p><h2>Beyond the work</h2><div class="rule"></div></div>
+<section class="data-sec"><div class="wrap">
+  <div class="sec-head reveal"><p class="kicker"><span class="sec-num">02</span> Data projects</p><h2>From records to findings</h2><div class="rule"></div>
+    <p class="lead" style="margin-top:1.3rem">Empirical work with public and administrative data, from cleaning and validity checks to findings and their limits.</p>
+  </div>
+
+  <article class="data-feature reveal">
+    <div class="df-main">
+      <p class="df-label">Featured analysis</p>
+      <h3 class="df-title">Heat Events and Heat Mortality: California vs. Arizona, 2007–2025</h3>
+      <p class="df-meta">UC Berkeley · NOAA Storm Events data · R, SQL, Tableau · 2026</p>
+      <p class="df-d">California and Arizona recorded similar numbers of heat events, yet Arizona recorded about 20 times more deaths per event. To test whether the gap reflected mortality or measurement, I read the event narratives alongside the numeric fields and traced how each state's deaths entered the record. Explored first in Tableau, then analyzed in R and SQL.</p>
+      <a class="btn btn-primary" href="projects/heat-mortality-analysis.html" target="_blank" rel="noopener">View the full analysis &rarr;</a>
+    </div>
+    <ul class="df-figs">
+      <li><p class="df-n">~20&times;</p><p class="df-c">more recorded deaths per heat event in Arizona than in California (1.04 vs. 0.05)</p></li>
+      <li><p class="df-n">2018</p><p class="df-c">Arizona's recorded deaths jump as Maricopa County's health department begins supplying death counts</p></li>
+      <li><p class="df-n">~99</p><p class="df-c">confirmed or possible heat deaths named in 2007–2010 narratives but recorded as zero</p></li>
+    </ul>
+  </article>
+
+  <p class="df-label reveal" style="margin-top:3rem">In progress</p>
+  <div class="data-ongoing reveal">
+    <div class="do-item">
+      <p class="do-m">UC Berkeley · Python</p>
+      <h3 class="do-t">How users prompt LLMs</h3>
+      <p class="do-d">Analyzing how users frame requests and give feedback in similar AI-assisted writing tasks, and how these patterns relate to response quality, across 837,989 conversations in the public WildChat-1M dataset.</p>
+    </div>
+    <div class="do-item">
+      <p class="do-m">UC Berkeley · R</p>
+      <h3 class="do-t">AI incidents and company responses</h3>
+      <p class="do-d">Studying incident frequency and subsequent legal actions by AI companies across approximately 2,000 reports from the AI Incident Database, re-linking many-to-many incident–report records to compare responses across risk categories and severity levels.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head reveal"><p class="kicker"><span class="sec-num">03</span> Community &amp; service</p><h2>Beyond the work</h2><div class="rule"></div></div>
   <p class="lead reveal" style="margin-bottom:.6rem">Long-term community service and support for people in difficult circumstances has been a lasting commitment of mine: teaching children, supporting communities in need, and leading student advocacy across China, Thailand, and Australia, much of it still ongoing.</p>
 
   <p class="workgroup reveal">Teaching &amp; education</p>
